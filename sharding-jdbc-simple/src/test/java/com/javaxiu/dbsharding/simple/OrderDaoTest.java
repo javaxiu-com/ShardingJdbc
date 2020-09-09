@@ -124,6 +124,13 @@ public class OrderDaoTest {
         System.out.println(users);
     }
 
+    /**
+     * @Description: Sharding-JDBC实现公共表测试
+     *
+     * @Author: java秀 javaxiu@javaxiu.com
+     * @Date: 2020/9/9 16:39
+     * @Version V1.0
+     */
     @Test
     public void testInsertDict(){
         dictDao.insertDict(3L,"user_type","2","超级管理员");
