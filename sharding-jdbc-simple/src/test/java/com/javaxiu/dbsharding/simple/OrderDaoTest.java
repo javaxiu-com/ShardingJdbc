@@ -90,17 +90,23 @@ public class OrderDaoTest {
         System.out.println(maps);
     }
 
+    /**
+     * @Description: sharding-jdbc读写分离-写
+     *
+     * @Author: java秀 javaxiu@javaxiu.com
+     * @Date: 2020/9/9 18:10
+     * @Version V1.0
+     */
     @Test
     public void testInsertUser(){
         for (int i = 10 ; i<14; i++){
             Long id = i + 1L;
             userDao.insertUser(id,"姓名"+ id );
         }
-
     }
 
     /**
-     * @Description: 垂直分表查询测试
+     * @Description: 垂直分表查询测试/sharding-jdbc读写分离-读
      *
      * @Author: java秀 javaxiu@javaxiu.com
      * @Date: 2020/9/9 16:10
