@@ -19,7 +19,7 @@ import java.util.Properties;
  * @author Administrator
  * @version 1.0
  **/
-@Configuration
+//@Configuration
 public class ShardingJdbcConfig {
 
     //配置分片规则

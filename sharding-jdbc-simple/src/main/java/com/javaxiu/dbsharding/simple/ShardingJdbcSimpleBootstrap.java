@@ -4,8 +4,8 @@ import org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguratio
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(exclude = SpringBootConfiguration.class)
-//@SpringBootApplication
+//@SpringBootApplication(exclude = SpringBootConfiguration.class)
+@SpringBootApplication
 public class ShardingJdbcSimpleBootstrap {
 
     public static void main(String[] args) {
