@@ -31,6 +31,13 @@ public class OrderDaoTest {
     @Autowired
     DictDao dictDao;
 
+    /**
+     * @Description: 水平分表新增测试
+     *
+     * @Author: java秀 javaxiu@javaxiu.com
+     * @Date: 2020/9/9 15:48
+     * @Version V1.0
+     */
     @Test
     public void testInsertOrder(){
         for(int i=1;i<20;i++){
@@ -38,6 +45,13 @@ public class OrderDaoTest {
         }
     }
 
+    /**
+     * @Description: 水平分表查询测试
+     *
+     * @Author: java秀 javaxiu@javaxiu.com
+     * @Date: 2020/9/9 15:48
+     * @Version V1.0
+     */
     @Test
     public void testSelectOrderbyIds(){
         List<Long> ids = new ArrayList<>();
@@ -48,12 +62,22 @@ public class OrderDaoTest {
         System.out.println(maps);
     }
 
+    /**
+     * @Description: 水平分库测试
+     *
+     * @Author: java秀 javaxiu@javaxiu.com
+     * @Date: 2020/9/9 15:47
+     * @Version V1.0
+     */
     @Test
     public void testSelectOrderbyUserId(){
-        long userId = 4;
+        long userId1 = 4;
+        long userId2 = 3;
 
-        List<Map> maps = orderDao.selectOrderbyUserId(userId);
-        System.out.println(maps);
+        List<Map> maps1 = orderDao.selectOrderbyUserId(userId1);
+        List<Map> maps2 = orderDao.selectOrderbyUserId(userId2);
+        System.out.println(maps1);
+        System.out.println(maps2);
     }
 
     @Test
@@ -74,6 +98,14 @@ public class OrderDaoTest {
         }
 
     }
+
+    /**
+     * @Description: 垂直分表查询测试
+     *
+     * @Author: java秀 javaxiu@javaxiu.com
+     * @Date: 2020/9/9 16:10
+     * @Version V1.0
+     */
     @Test
     public void testSelectUserbyIds(){
         List<Long> userIds = new ArrayList<>();
